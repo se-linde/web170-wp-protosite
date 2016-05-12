@@ -13,7 +13,7 @@
     
 <body>
 <header> 
-    <img src="images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />
+    <img src="<?php bloginfo('template_directory'); ?>/images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />
     
     <!--<img src="icons/Logo-Black-41px-TM.png" class="social" alt="LinkedIn link icon" />-->
     
@@ -24,30 +24,18 @@
     
     
     <a href="mailto:example@example.com ">
-    <img src="icons/email.png" class="email" alt="Email link icon." />
+    <img src="<?php bloginfo('template_directory'); ?>/icons/email.png" class="email" alt="Email link icon." />
     </a>
         
      
      <!-- <h2 class="pageid">Home Page</h2> -->
     
-  <h3><a href="index.html">Cornerstone Consulting</a></h3>
+  <h3><a href="index.php">Cornerstone Consulting</a></h3>
   <!-- START NAVIGATION (Main) -->
 
-<nav>
-  <ul class="nav">
-    <li><a href="http://www.lindese.com/web170/bones-template/about.html" target="_blank">About</a></li>
-    <li><a href="http://www.lindese.com/web170/bones-template/career.html" target="_blank">Career Services</a></li>
-    <li><a href="http://www.lindese.com/web170/bones-template/calendar.html" target="_blank">Calendar</a></li>
-    <li><a href="http://www.lindese.com/web170/bones-template/map.html" target="_blank">Map</a></li>
-    <li><a href="http://www.lindese.com/web170/bones-template/blog.html" target="_blank">Blog</a>
-      <ul>
-        <li><a href="http://www.lindese.com/web170/bones-template/blog1.html" target="_blank">Blog Post 1</a></li>
-        <li><a href="http://www.lindese.com/web170/bones-template/blog2.html" target="_blank">Blog Post 2</a></li>
-        <li><a href="http://www.lindese.com/web170/bones-template/blog3.html" target="_blank">Blog Post 3</a></li>
-        <li><a href="http://www.lindese.com/web170/bones-template/blog4.html" target="_blank">Blog Post 4</a></li>
-      </ul>
-    </li>
-    <li><a href="http://www.lindese.com/web170/bones-template/contact.html" target="_blank">Contact</a></li>
-  </ul>
-</nav>
+    
+    <!-- Here is the nav menu, via calling the wp_nav_menu() function --> 
+    
+    <?php wp_nav_menu( array( 'Theme_location' => 'main-menu' ) ); ?> 
+    
     <!-- end header --> 
