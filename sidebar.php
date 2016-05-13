@@ -40,7 +40,7 @@ if ($children) { ?>
 <div id = "sub-navigation" class="widget">
     <h2 class = "sub-navigation-title"><?php echo $parentname; // parent posts ?></h2>
     <ul class = "sub-navigation-items">
-        <?php <?php echo $children; // children posts ?>   
+        <?php echo $children; // children posts ?>   
     </ul>
 </div> 
 
