@@ -7,29 +7,25 @@
 <ul> 
     
     
-<?php wp_list_pages ( array( 'title_li' => '' )); // Calls the sidebar menu. ?> 
+<?php wp_list_pages ( array( 'title_li' => '' )); // Calls the sidebar menu. Works.?> 
     
 </ul>
     
-  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-    <p>Etiam placerat porta sapien at tempor. Nulla tempor dolor neque. Integer est libero, rutrum id sagittis vitae, hendrerit ut risus. Pellentesque laoreet luctus diam, at mattis leo commodo ut. Quisque est dolor, tincidunt at lacinia sit amet, ornare sit amet neque. Proin in sapien luctus odio sollicitudin fringilla. Proin a leo vitae purus varius tincidunt. Nullam posuere, odio id volutpat semper, nulla turpis pretium tortor, dictum pulvinar ante magna ac metus. Pellentesque commodo id felis eu fringilla. Fusce posuere, tortor volutpat varius ultrices, neque dolor pharetra nulla, quis gravida sapien ante at dui./        
-
-    <h3>Fancy test menu below. Fancy!</h3>    
-        
-</aside>
-
+  <h2>FANCY MENU TEST BELOW:</h2>
+    
+<div>
 <?php 
-// This is for posts and their parents. 
+// This is for posts and their parents. Does not work yet.  
 if ($post->post_parent) {
 
     // Calls the menu. If there is a parent post, get the post parent. 
-    $children = wp_list_pages ("title_li=&child_of=".$post->post_parent."$echo=0"); 
+    $children = wp_list_pages ("title_li=&child_of=".$post->post_parent."&echo=0"); 
     $parentname = get_the_title($post->post_parent); 
     
 } else {
     
     // If there is not a Parent Post, get the post ID instead. 
-    $children = wp_list_pages ("title_li=&child_of=".$post->ID."$echo=0"); 
+    $children = wp_list_pages ("title_li=&child_of=".$post->ID."&echo=0"); 
     $parentname = get_the_title($post->ID); 
 }
 
@@ -44,5 +40,9 @@ if ($children) { ?>
     </ul>
 </div> 
 
-<?php } ?>
+<?php } ?>    
+    
+</div>    
+</aside>
+
 <!-- END Aside -->
