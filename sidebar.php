@@ -11,11 +11,12 @@
     
 </ul>
     
-  <h2>FANCY MENU TEST BELOW:</h2>
+  <h2>Posts widget below; doesn't work yet.</h2>
     
 <div>
+    
 <?php 
-// This is for posts and their parents. Does not work yet.  
+// This is for sub posts and their parents. Does not work yet.  
 if ($post->post_parent) {
 
     // Calls the menu. If there is a parent post, get the post parent. 
