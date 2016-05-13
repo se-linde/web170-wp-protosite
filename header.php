@@ -36,13 +36,9 @@
     <!-- Here is the nav menu, via calling the wp_nav_menu() function --> 
     <!-- The function is actually broken down and stores in 'functions.php'; this calls it. --> 
     
-<nav>
+<?php wp_nav_menu( array( 'Theme_location' => 'main-menu', 'container' => 'div', 
+/* 'container_id' => 'navigation' */ /* Will match up with CSS tags.*/ )); ?> 
 
-<?php wp_nav_menu( array( 'Theme_location' => 'main-menu' ) ); ?> 
-
-</nav>
-    
-    
-    
+        
     
     <!-- end header --> 
