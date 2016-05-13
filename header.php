@@ -35,6 +35,7 @@
 
     
     <!-- Here is the nav menu, via calling the wp_nav_menu() function --> 
+    <!-- The function is actually broken down and stores in 'functions.php'; this calls it. --> 
     
     <?php wp_nav_menu( array( 'Theme_location' => 'main-menu' ) ); ?> 
     
