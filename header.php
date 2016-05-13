@@ -37,9 +37,9 @@
     <!-- The function is actually broken down and stores in 'functions.php'; this calls it. --> 
     
 <nav>
-<ul class="nav">
+
 <?php wp_nav_menu( array( 'Theme_location' => 'main-menu' ) ); ?> 
-</ul>  
+
 </nav>
     
     
