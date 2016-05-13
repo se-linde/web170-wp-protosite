@@ -9,10 +9,14 @@ Version: 0.0.01
 
 // This is where the main navigation menu lives. 
 
-function register_my_menu() {
-    register_nav_menu('main-menu',__( 'Main Menu')); 
+function register_my_menus() {
+    register_nav_menus( array( 
+    'main-menu' => __( 'Main Menu'),
+    'footer-menu' => __( 'Footer Menu' )
+    )); 
+    
 }
-add_action( 'init', 'register_my_menu' ); 
+add_action( 'init', 'register_my_menus' ); 
   
 // This is where the sidebar menu lives. 
 // Info here: https://developer.wordpress.org/reference/functions/wp_list_pages/#source-code
