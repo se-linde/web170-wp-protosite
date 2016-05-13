@@ -341,6 +341,15 @@ nav {
     text-shadow: 0 -1px 0 #000;
     position: relative;
   }
+
+#navigation ul li a:hover {
+    color:#aa80ff; /* Purple for Prince. */ 
+}
+
+#navigation ul li.current-menu-item a, #navigation ul li.current-menu-parent a {
+    color:#aa80ff; /* Purple for Prince. */ 
+}
+
   .nav{  
     vertical-align: top; 
     display: inline-block;
