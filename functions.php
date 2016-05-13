@@ -17,7 +17,9 @@ add_action( 'init', 'register_my_menu' );
 // This is where the sidebar menu lives. 
 // Info here: https://developer.wordpress.org/reference/functions/wp_list_pages/#source-code
 
-function wp_list_pages ( $args = '' ) { 
+// Had to comment out, didn't work now for some reason. 
+
+ /* function wp_list_pages ( $args = '' ) { 
     $defaults = array( 
         'depth' => 0, 'show_date' => '', 
         'date_format' => get_option( 'date_format' ), 
@@ -26,9 +28,7 @@ function wp_list_pages ( $args = '' ) {
         'authors' => '', 'sort_column' => 'menu_order, post_title', 
         'link_before' => '', 'link_after' => '', 'walker' => '', 
         ); 
+   $r = wp_parse_args( $args, $defaults ); 
+}  */ 
 
-    $r = wp_parse_args( $args, $defaults ); 
-}
-
-        
 ?>
