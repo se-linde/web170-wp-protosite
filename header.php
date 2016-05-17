@@ -12,7 +12,7 @@
     
 <body>
 <header> 
-<img src="<?php bloginfo('template_directory'); ?>/images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />
+<!--<img src="<?php bloginfo('template_directory'); ?>/images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />--> 
     
     <!--<img src="icons/Logo-Black-41px-TM.png" class="social" alt="LinkedIn link icon" />-->
     

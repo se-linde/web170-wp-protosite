@@ -17,7 +17,13 @@ function register_my_menus() {
     
 }
 add_action( 'init', 'register_my_menus' ); 
-  
+//
+
+// create post thumbnails. This makes thumbnails visible on the Themes menu. 
+add_theme_support ('post-thumbnails'); 
+// 
+
+
 // This is where the sidebar menu lives. 
 // Info here: https://developer.wordpress.org/reference/functions/wp_list_pages/#source-code
 

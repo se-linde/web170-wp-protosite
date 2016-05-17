@@ -15,10 +15,10 @@ Version: 0.0.01
 		padding:0;
 	}
 	
-	
 
 	html {
-       background:#000;
+       /* background:#000; */ 
+        background: #7B5080;
 	}
 
 	/* body is being used as the wrapper of all content for this layout */
@@ -34,7 +34,12 @@ Version: 0.0.01
         border-bottom: 2px solid #000;
         border-top: 2px solid #000;
 	}
-	
+
+/* Content Site Tage for content div */ 
+
+
+
+
 	h1,h2,h3,h4,h5,h6 small {
 		font-weight:normal;
         
