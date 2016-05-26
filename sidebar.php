@@ -7,7 +7,7 @@
 <ul> 
     
     
-<?php wp_list_pages ( array( 'title_li' => '' )); // Calls the sidebar menu. Works.?> 
+<?php wp_list_pages (array( 'title_li' => '' )); // Calls the sidebar menu. Works.?> 
     
 </ul>
     
@@ -47,3 +47,55 @@ if ($children) { ?>
 </aside>
 
 <!-- END Aside -->
+
+
+<!-- From Mike's Lecture. Won't currently compile.  -->
+<!-- Put in the missing functions in functions.php.  -->
+
+
+
+<div id="sidebar"> 
+    
+<div id="sub-navigation"> 
+
+<!-- Begin Subnavigation -->
+
+    <?php my_subnavigation(); ?> 
+</div>
+<!-- End Subnavigation -->
+<!-- begin quote -->
+
+<div id="my-quote"> 
+<?php ?>
+    if (get_post_meta($post->ID, 'quote', true)) {
+    
+    echo '<blockquote>Quote goes here! </blockquote>';  
+    
+    } 
+    
+</div>    
+Another format:     
+    
+<!-- This is escapement -->     
+    
+<div id="my-quote"> 
+<?php if (get_post_meta($post->ID, 'quote', true)) : ?>
+    
+    <blockquote><?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote>
+    
+<?php endif; ?> 
+    
+</div>    
+    
+    
+<!-- End quote -->
+<!-- Begin dynamic widgets -->
+    
+    <div id="dynamic-widgets">
+    <?php dynamic_sidebar(); ?> 
+
+    </div>
+    
+<!-- End dynamic widgets -->
+    
+</div>

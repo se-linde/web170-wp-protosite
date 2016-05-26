@@ -17,12 +17,14 @@ function register_my_menus() {
     
 }
 add_action( 'init', 'register_my_menus' ); 
-//
+
 
 // create post thumbnails. This makes thumbnails visible on the Themes menu. 
 add_theme_support ('post-thumbnails'); 
 // 
 
+// This might cause WP to freak out. 
+// register sidebars(3, array()); 
 
 // This is where the sidebar menu lives. 
 // Info here: https://developer.wordpress.org/reference/functions/wp_list_pages/#source-code
@@ -40,5 +42,39 @@ add_theme_support ('post-thumbnails');
         ); 
    $r = wp_parse_args( $args, $defaults ); 
 }  */ 
+
+function my_subnavigation() {
+    
+    global $post; 
+    
+    if (is_page()) { // If we're in Pages in the blog. 
+        
+        if ($post -> post_parent) { // Page has a parent? Go here. 
+        
+            echo '<h2>'.get_the_title($post->post_parent).'</h2>';
+            echo '<ul>';
+            
+            wp_list_pages(array('title_li'=> '', 'child_of' => $post->post_parent,)); // This lists hte children of the page, if there are any. 
+            echo '</ul>';
+            
+        } else { // Page does not have a parent? Go here. 
+        
+            echo '<h2>'.get_the_title($post->ID).'</h2>'; 
+            echo '<ul>';
+            wp_list_pages(array('title_li'=>'', 'child_of'=> $post->ID)); 
+            echo '</ul>';
+            
+        }
+        
+} else { // If we're not in the Pages section of the blog. 
+
+    echo '<h2>Blog!</h2>'; 
+    echo '<ul>';
+    wp_list_pages(array('title_li'=> '',)); // Lists posting categories instead.     
+    echo '</ul>';    
+        
+    } 
+
+} 
 
 ?>
