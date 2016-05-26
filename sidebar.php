@@ -66,12 +66,12 @@ if ($children) { ?>
 <!-- begin quote -->
 
 <div id="my-quote"> 
-<?php ?>
+<?php 
     if (get_post_meta($post->ID, 'quote', true)) {
     
     echo '<blockquote>Quote goes here! </blockquote>';  
     
-    } 
+    } ?>
     
 </div>    
 Another format:     
