@@ -74,18 +74,19 @@ if ($children) { ?>
     } ?>
     
 </div>    
-Another format:     
+
+    <!-- Another format: -->     
     
 <!-- This is escapement -->     
     
-<div id="my-quote"> 
-<?php if (get_post_meta($post->ID, 'quote', true)) : ?>
+<!-- <div id="my-quote"> -->
+<!-- <// ?php if (get_post_meta($post->ID, 'quote', true)) : ?> -->
     
-    <blockquote><?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote>
+    <!-- <blockquote><// ?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote> -->
     
-<?php endif; ?> 
+<!-- <// ?php endif; ?> 
     
-</div>    
+<!-- </div>    
     
     
 <!-- End quote -->
