@@ -13,6 +13,11 @@
          <small>Posted in <?php the_category(', '); ?> &sect; </small>
      <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?>. </small>   
     
+    
+    <?php if ( has_post_thumbnail() ) { // If there is a Featured Image, post it as thumbnail. 
+        the_post_thumbnail('thumbnail'); 
+    } ?> 
+    
      <?php the_content(''); // Posts the content. ?>
      <?php endwhile; endif; ?>
      <small>single.php</small>

@@ -21,7 +21,13 @@ add_action( 'init', 'register_my_menus' );
 
 // create post thumbnails. This makes thumbnails visible on the Themes menu. 
 add_theme_support ('post-thumbnails'); 
-// 
+
+// This posts the thumbnails. 
+// If the post has a thumbnail attached to it as a Featured Image, post it. 
+
+//function the_post_thumbnail( $size = 'post-thumbnail', $attr= '' ) {
+//    echo get_the_post_thumbnail( null, $size, $attr);
+// }
 
 // This might cause WP to freak out. 
 // register sidebars(3, array()); 
