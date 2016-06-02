@@ -22,6 +22,40 @@ add_action( 'init', 'register_my_menus' );
 // create post thumbnails. This makes thumbnails visible on the Themes menu. 
 add_theme_support ('post-thumbnails'); 
 
+
+
+
+
+function get_my_title_tag() { // This function gets the title tag. PHP is simple that way. 
+    
+    global $post; // Don't forget this; variable scope. 
+    
+    if (is_front_page()) { // for the front page. 
+        
+        bloginfo ('description'); // The site's tagline to be displayed here. 
+        
+    } elseif ( is_page() || is_single() ) { // On a page or a single posting. 
+        
+        the_title(); // The page or posting's title.  
+        
+    } else { // for everything else. 
+        
+        bloginfo ('description'); // Display the site's tagline. 
+    }
+        
+    if ( $post->post_parent ) {
+        
+        echo ' | '; // separator pipe. 
+        echo get_the_title( $post->post_parent ); 
+        
+    }
+    
+    echo ' | '; // separator pipe symbol.
+    bloginfo('name'); // name of the site. 
+    echo ' | '; // separator pipe symbol.
+    echo 'Seattle, WA';  // My location. 
+}
+
 // This posts the thumbnails. 
 // If the post has a thumbnail attached to it as a Featured Image, post it. 
 

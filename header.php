@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>index.php</title>
+<title><?php get_my_title_tag(); ?></title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link href='https://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
