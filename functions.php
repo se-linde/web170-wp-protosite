@@ -22,7 +22,7 @@ add_action( 'init', 'register_my_menus' );
 // create post thumbnails. This makes thumbnails visible on the Themes menu. 
 add_theme_support ('post-thumbnails'); 
 
-
+add_post_type_support('page', 'excerpt'); 
 
 
 

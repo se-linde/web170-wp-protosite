@@ -2,8 +2,15 @@
 <html>
 <head>
 <title><?php get_my_title_tag(); ?></title>
+    
+<!-- begin meta --> 
+    
+    
+    
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
+<meta name="description" content="<?php echo get_the_excerpt(); ?>">  
+    
 <link href='https://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet"  href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all"/>
