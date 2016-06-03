@@ -9,6 +9,18 @@ Version: 0.0.01
 
 // This is where the main navigation menu lives. 
 
+
+
+// Activate the sidebars. 
+
+register_sidebar( array (
+    'before_widget' => '<div id="%1$s" class="widget %2$s">', 
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',                      
+                         
+)); 
+
 function register_my_menus() {
     register_nav_menus( array( 
     'main-menu' => __( 'Main Menu'),
@@ -24,7 +36,7 @@ add_theme_support ('post-thumbnails');
 
 add_post_type_support('page', 'excerpt'); 
 
-
+// Gets the title tag dynamically, and puts it in. Good for SEO results. 
 
 function get_my_title_tag() { // This function gets the title tag. PHP is simple that way. 
     
@@ -82,6 +94,7 @@ function get_my_title_tag() { // This function gets the title tag. PHP is simple
         ); 
    $r = wp_parse_args( $args, $defaults ); 
 }  */ 
+
 
 function my_subnavigation() {
     

@@ -5,14 +5,9 @@
     <!-- side nav menu --> 
 
 <ul> 
-    
-    
 <?php wp_list_pages (array( 'title_li' => '' )); // Calls the sidebar menu. Works.?> 
     
-</ul>
-    
-  <h2>Posts widget below; doesn't work yet.</h2>
-    
+</ul>    
 <div>
     
 <?php 
@@ -75,7 +70,7 @@ if ($children) { ?>
 <!-- Begin dynamic widgets -->
     
     <div id="dynamic-widgets">
-    <?php dynamic_sidebar(); ?> 
+    <?php dynamic_sidebar(1); ?> 
 
     </div>
     
