@@ -49,20 +49,15 @@ if ($children) { ?>
 <!-- END Aside -->
 
 
-<!-- From Mike's Lecture. Won't currently compile.  -->
-<!-- Put in the missing functions in functions.php.  -->
-
-
-
 <div id="sidebar"> 
-    
 <div id="sub-navigation"> 
 
 <!-- Begin Subnavigation -->
 
-    <?php my_subnavigation(); ?> 
+<?php my_subnavigation(); ?> 
 </div>
 <!-- End Subnavigation -->
+
 <!-- begin quote -->
 
 <div id="my-quote"> 
@@ -75,19 +70,6 @@ if ($children) { ?>
     
 </div>    
 
-    <!-- Another format: -->     
-    
-<!-- This is escapement -->     
-    
-<!-- <div id="my-quote"> -->
-<!-- <// ?php if (get_post_meta($post->ID, 'quote', true)) : ?> -->
-    
-    <!-- <blockquote><// ?php echo get_post_meta($post->ID, 'Quote', true); ?></blockquote> -->
-    
-<!-- <// ?php endif; ?> 
-    
-<!-- </div>    
-    
     
 <!-- End quote -->
 <!-- Begin dynamic widgets -->
