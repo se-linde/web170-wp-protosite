@@ -66,12 +66,12 @@ if ($children) { ?>
 <!-- begin quote -->
 
 <div id="my-quote"> 
-<?php 
-    if (get_post_meta($post->ID, 'quote', true)) {
     
-    echo '<blockquote>Quote goes here! </blockquote>';  
+<?php if (get_post_meta($post->ID, 'Quote', true)) : // check to see if quote exists. ?>
     
-    } ?>
+    <blockquote><?php echo get_post_meta($post->ID, 'Quote', true); // Displays quote. ?></blockquote>
+    
+    <?php endif; ?> 
     
 </div>    
 
@@ -82,7 +82,7 @@ if ($children) { ?>
 <!-- <div id="my-quote"> -->
 <!-- <// ?php if (get_post_meta($post->ID, 'quote', true)) : ?> -->
     
-    <!-- <blockquote><// ?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote> -->
+    <!-- <blockquote><// ?php echo get_post_meta($post->ID, 'Quote', true); ?></blockquote> -->
     
 <!-- <// ?php endif; ?> 
     
