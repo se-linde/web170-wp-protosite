@@ -31,6 +31,7 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' ); 
 
 
+
 // create post thumbnails. This makes thumbnails visible on the Themes menu. 
 add_theme_support ('post-thumbnails'); 
 
@@ -68,12 +69,7 @@ function get_my_title_tag() { // This function gets the title tag. PHP is simple
     echo 'Seattle, WA';  // My location. 
 }
 
-// This posts the thumbnails. 
-// If the post has a thumbnail attached to it as a Featured Image, post it. 
 
-//function the_post_thumbnail( $size = 'post-thumbnail', $attr= '' ) {
-//    echo get_the_post_thumbnail( null, $size, $attr);
-// }
 
 // This might cause WP to freak out. 
 // register sidebars(3, array()); 
@@ -127,7 +123,38 @@ function my_subnavigation() {
     echo '</ul>';    
         
     } 
-
 } 
+
+
+// Get my FlexSlider
+
+function get_flexslider(){
+    
+    global $post; // Don't forget this. 
+    
+    $attachments = get_children( array( 'post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'attachment', 'post_mime_type' => 'image' ) ); 
+    
+    if ($attachments) {
+        
+    echo '<div class="flexslider">'; 
+    echo '<ul class="slides">'; 
+        
+    foreach ($attachments as $attachment) { // foreach loop to get all the images. 
+        
+    echo '<li>'; 
+    echo wp_get_attachment_image($attachment->ID, 'full');
+    echo '</li>';
+        
+    }    
+        
+        
+        // <a href="' . $caselink . "'>
+        
+    echo '</ul>'; 
+    echo '</div>'; 
+    
+    }
+}
+
 
 ?>
