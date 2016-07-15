@@ -1,0 +1,176 @@
+/* CSS Style Document. 
+Borrowed from Mike Sinkula, just to put 
+my blog into a less horrendous state.
+From here: https://github.com/msinkula/web170-Sp16/blob/master/style.css
+*/ 
+
+/* 
+Theme Name: Dwayneland Spring 2016 Demo
+Author: Dwayne Linde
+Author URI: http://lindese.com/web170/
+Description: The Spring 2016 WordPress class site for Dwayne Linde. 
+Version: 0.0.02
+*/ 
+
+/* 
+Purple: http://slayeroffice.com/tools/color_palette/?hex=39275B
+Gold: http://slayeroffice.com/tools/color_palette/?hex=EBB700
+*/
+
+* { margin: 0; padding: 0; }
+
+html {
+    
+    background: linear-gradient(to bottom, #2b1d44 0%, #39275b 100%);
+}
+
+body {
+    
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 100%; /* sets all type sizes to a default 16px */ 
+    color: #000; 
+    background-image: url(images/bg-boxes.png); 
+    background-position: top; /* positioned to the top of the page. */ 
+    background-repeat: repeat-x; /* repeat horizontally */ 
+}
+
+h1 {
+    font-size: 2.25em; /* 36px */ 
+    line-height: 100%; /* 36px */ 
+    color: #FFF; 
+}
+
+h2 {
+    font-size: 1.5em; /* 24px */ 
+    line-height: 100%; /* 24px */ 
+    color: #39275B; /* purple. Prince RIP. */ 
+    /* padding-top 8px; */ 
+    margin-bottom: 10px; 
+}
+
+h3 {
+    font-size: 1.125em; /* 24px */ 
+    line-height: 100%; /* 24px */ 
+    color: #39275B; /* purple. Prince RIP. */ 
+    padding-top 10px;
+    margin-bottom: 4px; 
+}
+
+p {
+    
+    font-size: 1em; /* 16px */ 
+    line-height: 150%; /* 24px */ 
+    margin-bottom: 10px; 
+}
+
+ol, ul { 
+    font-size: 1em; /* 16px */ 
+    line-height: 150%; /* 24px */
+    margin-bottom: 10px; 
+    list-style-position: inside; /* No idea what this does. */ 
+}
+
+small {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+img {
+    box-sizing: border-box; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+#header {
+    max-width: 980px; 
+    margin: 0 auto; 
+    padding-top: 20px; 
+    /* border: 1px solid black; */ 
+}
+
+    #header a {
+        color: #FFF; /* white */ 
+        text-decoration: none; /* remove underline */ 
+    }
+
+    #header a:hover {
+        color: #EBB700; /* gold */ 
+    }
+    
+    #toggle {
+        display: none; 
+    }
+
+
+#navigation {
+    max-width: 980px; 
+    margin: 0 auto; 
+    padding: 10px 0; 
+    /* border: 1px solid black; */ 
+    color: #FFF; 
+}
+    
+#navigation ul {
+    overflow: hidden; 
+    /* border: 1px solid grey; */ 
+    padding: 10px 0; 
+    margin: 0; 
+}
+
+#navigation ul li {
+    list-style: none; 
+    float: left;
+    margin: 0; /* overwrites existing margins. */ 
+    margin-right: 20px; 
+}
+
+#navigation ul li a {
+    color: #FFF; /* let's use white for the default link state. */ 
+    text-decoration: none; /* This disables the default underline */ 
+}
+
+
+navigation ul li a:hover {
+    color: #EBB700; /* bright gold */ 
+}
+
+#navigation ul li.current-menu-item a, 
+#navigation ul li.current-menu-parent a {
+    color: #EBB700; /* bright gold */
+}
+
+#navigation ul li ul.sub-menu {
+    display: none; 
+}
+
+#middle {
+    max-width: 940px; 
+    background-image: url(/*images/bg-960.png); 
+    background-position: center; 
+    background-repeat: repeat-y; /* Repeats vertically */ 
+    background-color: #FFF; 
+    overflow: hidden; /* prevents the Great Collapse */ 
+    margin: 0 auto; 
+    padding: 20 px; 
+    border-radius: 10px; /* adds rounded corners */ 
+}
+
+#middle a {
+    color: #39275B; /* purple Prince RIP */ 
+}
+
+#middle a:hover {
+    color: #EBB700; /* gold */ 
+}
+
+
+#widgets {
+    overflow: hidden; 
+}
+
+#widgets section.widget-item {
+    width: 300px; 
+    float: left; 
+    margin-right: 20px; 
+}
+
