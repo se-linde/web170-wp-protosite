@@ -55,7 +55,7 @@
 <!-- end Toggle Menu -->     
     
 <!-- begin WP Head function --> 
-<? php wp_head(); ?>
+<? //php wp_head(); ?>
 <!-- end WP Head function --> 
         
 </head>    
@@ -82,7 +82,7 @@
 </ul> 
 </div> -->    
     
-<? php wp_nav_menu(array('theme_location' => 'main_menu', 'container' => 'div', 'container_id' => 'navigation',)); ?>     
+<? //php wp_nav_menu(array('theme_location' => 'main_menu', 'container' => 'div', 'container_id' => 'navigation',)); ?>     
       
     
 <!-- End Navigation -->
