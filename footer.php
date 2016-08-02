@@ -1,12 +1,20 @@
+</div>
+<!-- End Content --> 
 
-<!-- footer starts -->     
+<!-- Begin Footer --> 
+
+<div id="footer">
     
-<footer>
-    <small>
-  Cornerstone Consulting, Spokane, WA <br>
-  <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> and <a href="http://validator.w3.org/check/referer">Valid HTML</a> ~ Website by S.E. Linde, copyright 2016.<br>
-        <a href="disclaimer.html">Legal Disclaimer</a>
-    </small>
-</footer>
+<p>&copy;2016 <a href="http://www.lindese.com/">Sara Dwayne Linde</a>. All Rights Reserved. <?php wp_loginout(); ?>. </p>
+</div>
+
+<!-- End Footer --> 
+
+<!-- Begin WP Footer Function --> 
+
+<?php wp_footer(); ?>
+
+<!-- End WP Footer Function --> 
+
 </body>
 </html>
