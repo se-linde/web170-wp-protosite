@@ -1,7 +1,6 @@
 <?php get_header(); ?> 
 
 <!-- Main Content --> 
-<!-- Looked at this on 9-13, doesn't need to be changed. -->
 
 <div id="content">
 
@@ -10,9 +9,18 @@
 
      if ( have_posts() ) : while ( have_posts() ) : the_post(); // Are there posts? Yay! Post the posts then. ?> 
      <h2><a href="<?php the_permalink(); // Make the URL the permalink function value. ?>"><?php the_title();  // Make the title the title function value. ?></a></h2>
+    
+         <small>Posted in <?php the_category(', '); ?> &sect; </small>
+     <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?>. </small>   
+    
+    
+    <?php if ( has_post_thumbnail() ) { // If there is a Featured Image, post it as thumbnail. 
+        the_post_thumbnail('thumbnail'); 
+    } ?> 
+    
      <?php the_content(''); // Posts the content. ?>
      <?php endwhile; endif; ?>
-     <small>page.php</small>
+     <small>single.php</small>
     
 </div>     
      

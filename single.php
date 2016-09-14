@@ -15,7 +15,7 @@
     
     
     <?php if ( has_post_thumbnail() ) { // If there is a Featured Image, post it as thumbnail. 
-        the_post_thumbnail('thumbnail'); 
+        the_post_thumbnail('large'); 
     } ?> 
     
      <?php the_content(''); // Posts the content. ?>
