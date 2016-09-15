@@ -55,7 +55,7 @@
 <!-- end Toggle Menu -->     
     
 <!-- begin WP Head function --> 
-<?php wp_head(); ?>
+<? //php wp_head(); ?>
 <!-- end WP Head function --> 
         
 </head>    
@@ -82,10 +82,9 @@
 </ul> 
 </div> -->    
     
-<div id="navigation">  <!-- Nav Bar not appearing? PUT A DIV ON IT! -->  
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'div','container_id' => 'navigation', ) ); ?>    
-</div>   
-
+<? //php wp_nav_menu(array('theme_location' => 'main_menu', 'container' => 'div', 'container_id' => 'navigation',)); ?>     
+      
+    
 <!-- End Navigation -->
 
 <!-- Begin Content -->
